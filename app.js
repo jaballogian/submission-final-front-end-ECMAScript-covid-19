@@ -1,0 +1,1 @@
+import "/src/script/component/app-bar.js";

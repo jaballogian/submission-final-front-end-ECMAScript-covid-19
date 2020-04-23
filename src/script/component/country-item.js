@@ -5,12 +5,8 @@ class CountryItem extends HTMLElement {
         this.shadowDOM = this.attachShadow({mode: "open"});
     }
 
-    // set country(country) {
-    //     this._country = country;
-    //     this.render();
-    // }
-
-    connectedCallback(){
+    set country(country) {
+        this._country = country;
         this.render();
     }
 
@@ -50,19 +46,19 @@ class CountryItem extends HTMLElement {
         </style>
         <div class="row">
             <div class="row-flag">
-                <img src="https://www.countryflags.io/be/flat/32.png" alt="" height="32px">
+                <img src="https://www.countryflags.io/${this._country.code}/flat/32.png" alt="${this._country.name}" height="32px">
             </div>
             <div class=row-country>
-                <h3 id="row-country-text">Country</h3>
+                <h3 id="row-country-text">${this._country.name}</h3>
             </div>
             <div class=row-confirmed>
-                <h3 id="row-confirmed-text">Confirmed</h3>
+                <h3 id="row-confirmed-text">${this._country.latest_data.confirmed}</h3>
             </div>
             <div class=row-recovered>
-                <h3 id="row-recovered-text">Recovered</h3>
+                <h3 id="row-recovered-text">${this._country.latest_data.recovered}</h3>
             </div>
             <div class=row-deaths>
-                <h3 id="row-deaths-text">Deaths</h3>
+                <h3 id="row-deaths-text">${this._country.latest_data.deaths}</h3>
             </div>
         </div>`;
     }

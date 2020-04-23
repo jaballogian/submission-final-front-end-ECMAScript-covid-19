@@ -41,7 +41,7 @@ class TitleBar extends HTMLElement {
             }
         </style>
         <div class="title-bar">
-            <h2 class="title-bar-flags">Flags</h2>
+            <h2 class="title-bar-flag">Flag</h2>
             <h2 class="title-bar-country">Country</h2>
             <h2 class="title-bar-confirmed">Confirmed</h2>
             <h2 class="title-bar-recovered">Recovered</h2>

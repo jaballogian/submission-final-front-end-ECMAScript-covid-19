@@ -7,21 +7,34 @@ class CountryList extends HTMLElement {
         this.shadowDOM = this.attachShadow({mode: "open"});
     }
  
-    // set rows(rows) {
-    //     this._rows = rows;
-    //     this.render();
-    // }
-
-    connectedCallback(){
+    set countries(countries) {
+        this._countries = countries;
         this.render();
     }
 
     render() {
         this.shadowDOM.innerHTML = ``;
-        for(let i = 0; i < 5; i++){
+        this._countries.forEach(country => {
             const contryItemElement = document.createElement("country-item");
+            contryItemElement.country = country;
             this.shadowDOM.appendChild(contryItemElement);
-        }
+        });
+    }
+
+    renderError(message) {
+        this.shadowDOM.innerHTML = `
+        <style>
+           .placeholder {
+               font-weight: lighter;
+               color: rgba(0,0,0,0.5);
+               -webkit-user-select: none;
+               -moz-user-select: none;
+               -ms-user-select: none;
+               user-select: none;
+           }
+        </style>
+        `;
+        this.shadowDOM.innerHTML += `<h2 class="placeholder">${message}</h2>`;
     }
 }
 

@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "just a test"
+    "start-dev": "webpack-dev-server --config webpack.dev.js --open",
+    "build" : "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",

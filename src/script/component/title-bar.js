@@ -10,42 +10,54 @@ class TitleBar extends HTMLElement {
     }
 
     render(){
+
         this.shadowDOM.innerHTML = `
         <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }    
-        
-            .title-bar {
+            .row {
                 display: flex;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                 border-radius: 10px;
-                padding: 20px;
+                padding: 0px 20px 0px 20px;
                 margin: 20px 20px 20px 20px;
-                background-color: beige;
+                background-color: white;
                 text-align: center;
+                background-color: beige;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             }
             
-            .title-bar-flags {
+            .row-flag {
                 width: 10%;
+                margin-top: auto;
+                margin-bottom: auto;
             }
             
-            .title-bar-country {
+            .row-country {
                 width: 30%;
+                margin-top: auto;
+                margin-bottom: auto;
             }
             
-            .title-bar-confirmed, .title-bar-recovered, .title-bar-deaths {
+            .row-confirmed, .row-recovered, .row-deaths {
                 width: 20%;
-            }
+                margin-top: auto;
+                margin-bottom: auto;
+            } 
         </style>
-        <div class="title-bar">
-            <h2 class="title-bar-flag">Flag</h2>
-            <h2 class="title-bar-country">Country</h2>
-            <h2 class="title-bar-confirmed">Confirmed</h2>
-            <h2 class="title-bar-recovered">Recovered</h2>
-            <h2 class="title-bar-deaths">Deaths</h2>
+        <div class="row">
+            <div class="row-flag">
+                <h2>Flag</h2>
+            </div>
+            <div class="row-country">
+                <h2>Country</h2>
+            </div>
+            <div class="row-confirmed">
+                <h2>Confirmed</h2>
+            </div>
+            <div class="row-recovered">
+                <h2>Recovered</h2>
+            </div>
+            <div class="row-deaths">
+                <h2>Deaths</h2>
+            </div>
         </div>`;
     }
 }

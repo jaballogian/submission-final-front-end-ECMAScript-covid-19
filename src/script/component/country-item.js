@@ -18,7 +18,6 @@ class CountryItem extends HTMLElement {
         this.shadowDOM.innerHTML = `
         <style>
             .main-row {
-                display: flex;
                 background-color: dimgrey;
                 width: 100%;
             }

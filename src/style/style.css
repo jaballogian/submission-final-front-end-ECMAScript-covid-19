@@ -8,3 +8,13 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+.main-row {
+    background-color: dimgrey;
+    width: 100%;
+}
+
+.main-row .main-cell {
+    width: 20%;
+    color: white;
+}

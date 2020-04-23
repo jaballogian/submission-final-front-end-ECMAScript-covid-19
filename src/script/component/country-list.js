@@ -1,6 +1,6 @@
 import "./country-item.js";
 
-class CountryRow extends HTMLElement {
+class CountryList extends HTMLElement {
 
     constructor() {
         super();
@@ -25,4 +25,4 @@ class CountryRow extends HTMLElement {
     }
 }
 
-customElements.define("country-row", CountryRow);
+customElements.define("country-list", CountryList);
